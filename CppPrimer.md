@@ -50,3 +50,42 @@ eg. reverse
 5、下标运算(iter[n])
 
 eg. sort, array/deque/string/vector的迭代器，内置数组
+
+# 2 算法命名
+
+传递谓词
+_if
+_copy
+
+# 3 关联容器
+
+## 3.1 common
+key_type 容器的关键字
+mapped_type 关联字关联的类型，仅适用于map
+value_type 对于set, value_type == key_type; 对于map, value_type == pair<const key_type, mapped_type>
+
+erase操作
+c.erase(k);
+c.erase(it);
+c.erase(b, e);
+
+## 3.2 map
+添加新元素
+```
+m.insert({word, 1});
+m.insert(make_pair(word, 1));
+m.insert(pair<string, size_t>(word, 1));
+m.insert(map<string, size_t>::value_type(word, 1));
+```
+
+访问
+```
+c[k]
+c.at(k)
+```
+
+通常情况下，解引用一个迭代器所返回的类型与下标运算符返回的类型一致，但是，对于map来说，执行下标操作，会获得一个mapped_type对象，而解引用一个map迭代器时，得到value_type对象。
+map下标运算返回左值
+
+## 3.n question
+1、emplace和emplace_hint的区别?
