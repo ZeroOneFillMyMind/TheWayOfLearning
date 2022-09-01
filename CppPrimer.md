@@ -87,5 +87,30 @@ c.at(k)
 通常情况下，解引用一个迭代器所返回的类型与下标运算符返回的类型一致，但是，对于map来说，执行下标操作，会获得一个mapped_type对象，而解引用一个map迭代器时，得到value_type对象。
 map下标运算返回左值
 
+
+## 3.3 查找
+```
+lower_bound / upper_bound 不适用于无序容器
+下标 / at 适用于非const的map和unordered_map
+c.find(k)
+c.count(k)
+c.lower_bound(k)
+c.upper_bound(k)
+c.equal_range(k)
+```
+
+multimap的find操作：
+在multimap中，同一个键关联的元素必然相邻存放
+所以可以通过count/find操作, 以及++iter操作一次访问
+
+lower_bound如果查找的关键字不存在，则返回尾后迭代器
+upper_bound如果查找的关键字是最大的，则返回尾后迭代器
+
+```
+for (auto beg = authors.lower_bound(search_item), end = authors.upper_bound(search_item); beg != end; ++beg) {
+    cout << beg->second << endl;
+}
+```
+
 ## 3.n question
 1、emplace和emplace_hint的区别?
