@@ -73,7 +73,7 @@ c.erase(b, e);
 添加新元素
 ```
 m.insert({word, 1});
-m.insert(make_pair(word, 1));
+m.insert(make_pair(word, 1)); // <utility>
 m.insert(pair<string, size_t>(word, 1));
 m.insert(map<string, size_t>::value_type(word, 1));
 ```
@@ -112,5 +112,54 @@ for (auto beg = authors.lower_bound(search_item), end = authors.upper_bound(sear
 }
 ```
 
+## 3.4 注意事项
+通常不对关联容器使用泛型算法；
+
 ## 3.n question
 1、emplace和emplace_hint的区别?
+
+# 4 智能指针
+
+## 4.1 分类
+shared_ptr 允许多个指针指向同一对象
+unique_ptr 独占所指向对象
+weak_ptr 弱引用，指向shared_ptr所管理的对象
+
+```cpp
+// 共有操作
+shared_ptr<T> sp;
+unique_ptr<T> up;
+
+p
+*p
+p->mem
+p.get()
+
+swap(p, q);
+p.swap(q);
+
+// shared_ptr独有操作
+make_shared<T>(args); // <memory>
+
+shared_ptr<T>p(q);
+
+p = q;
+p.unique();
+p.use_count();
+
+// unique_ptr
+make_unique<T> p; // C++14
+
+```
+
+## 4.2 shared_ptr
+
+当进行拷贝或者赋值操作时，每个shared_ptr会记录有多少shared_ptr指向同一对象。（引用计数器，变为0时释放对象）
+引用计数器减少(析构)：被赋新值或者shared_ptr被销毁
+
+程序使用动态内存的原因：
+1、程序不知道自己需要使用多少对象;
+2、程序不知道所需对象的准确类型;
+3、程序需要在多个对象中共享数据;
+
+
