@@ -1,0 +1,6 @@
+/usr/local/bin/cmake_examples_inst_bin
+/usr/local/include/installing/hello.h
+/usr/local/etc/cmake_examples.conf
+/usr/local/bin/cmake_examples_inst_bin
+/usr/local/lib/libcmake_examples_inst.so
+/usr/local/etc/cmake_examples.conf

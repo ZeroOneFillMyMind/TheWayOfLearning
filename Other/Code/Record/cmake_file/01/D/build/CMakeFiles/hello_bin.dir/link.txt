@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/hello_bin.dir/src/main.cpp.o  -o hello_bin  -Wl,-rpath,/mnt/g/cmake_file/01/D/build libhello_shared.so 

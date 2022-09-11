@@ -1,0 +1,4 @@
+/mnt/g/cmake_file/01/D/build/CMakeFiles/rebuild_cache.dir
+/mnt/g/cmake_file/01/D/build/CMakeFiles/hello_bin.dir
+/mnt/g/cmake_file/01/D/build/CMakeFiles/edit_cache.dir
+/mnt/g/cmake_file/01/D/build/CMakeFiles/hello_shared.dir

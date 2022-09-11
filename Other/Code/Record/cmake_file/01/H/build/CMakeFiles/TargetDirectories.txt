@@ -1,0 +1,3 @@
+/mnt/g/cmake_file/01/H/build/CMakeFiles/rebuild_cache.dir
+/mnt/g/cmake_file/01/H/build/CMakeFiles/edit_cache.dir
+/mnt/g/cmake_file/01/H/build/CMakeFiles/third_party_include.dir

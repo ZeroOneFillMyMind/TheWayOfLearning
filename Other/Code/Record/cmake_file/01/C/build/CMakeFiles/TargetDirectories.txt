@@ -1,0 +1,4 @@
+/mnt/g/cmake_file/01/C/build/CMakeFiles/rebuild_cache.dir
+/mnt/g/cmake_file/01/C/build/CMakeFiles/edit_cache.dir
+/mnt/g/cmake_file/01/C/build/CMakeFiles/hello_binary.dir
+/mnt/g/cmake_file/01/C/build/CMakeFiles/hello_library.dir

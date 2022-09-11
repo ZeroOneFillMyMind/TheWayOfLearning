@@ -1,0 +1,3 @@
+/mnt/g/cmake_file/01/G/build/CMakeFiles/edit_cache.dir
+/mnt/g/cmake_file/01/G/build/CMakeFiles/rebuild_cache.dir
+/mnt/g/cmake_file/01/G/build/CMakeFiles/cmake_examples_compile_flags.dir
